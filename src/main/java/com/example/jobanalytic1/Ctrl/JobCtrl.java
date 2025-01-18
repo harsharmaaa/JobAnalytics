@@ -27,7 +27,7 @@ class JobAnalyticsController {
     public List<JobRoleDistribution> getJobRoles() {
         return jobAnalyticsService.getJobRoleDistribution();
     }
-
+// /df kjsnkdngvjdrgnkj;g;jnkkjn;
     @GetMapping("/roles/state")
     public List<StateRoleDistribution> getJobRolesByState() {
         return jobAnalyticsService.getJobRoleDistributionByState();
