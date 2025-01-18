@@ -83,14 +83,14 @@ public class JobAnalyticsService {
         List<JobData> jobDataList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
             String line;
-            br.readLine(); // Skip header
+            br.readLine(); 
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                if (values.length >= 5) {
     try {
-        // Extract population and parse it safely
-        String populationStr = values[4].replaceAll("[^0-9]", ""); // Remove non-digits
-        int population = populationStr.isEmpty() ? 0 : Integer.parseInt(populationStr); // Default to 0 if empty
+        
+        String populationStr = values[4].replaceAll("[^0-9]", ""); 
+        int population = populationStr.isEmpty() ? 0 : Integer.parseInt(populationStr); 
         jobDataList.add(new JobData(values[0], values[1], values[2], values[3], population));
     } catch (NumberFormatException e) {
         System.err.println("Invalid population value in row: " + Arrays.toString(values));

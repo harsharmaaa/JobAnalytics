@@ -21,7 +21,7 @@ public class JobData {
         return "Other";
     }
 
-    // Getters and Setters
+    
     public String getCity() { return city; }
     public String getState() { return state; }
     public int getPopulation() { return population; }

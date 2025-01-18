@@ -1,7 +1,7 @@
 package com.example.jobanalytic1.Ctrl;
 
 import java.util.List;
-import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +15,9 @@ import com.example.jobanalytic1.entitiy.StateRoleDistribution;
 
 
 
-// Controller Layer
+
 @RestController
-@RequestMapping("/api/jobs")
+@RequestMapping("/api")
 class JobAnalyticsController {
 
     @Autowired
@@ -27,13 +27,13 @@ class JobAnalyticsController {
     public List<JobRoleDistribution> getJobRoles() {
         return jobAnalyticsService.getJobRoleDistribution();
     }
-// /df kjsnkdngvjdrgnkj;g;jnkkjn;
-    @GetMapping("/roles/state")
+
+    @GetMapping("/state")
     public List<StateRoleDistribution> getJobRolesByState() {
         return jobAnalyticsService.getJobRoleDistributionByState();
     }
 
-    @GetMapping("/roles/cluster")
+    @GetMapping("/cluster")
     public List<JobCluster> getJobRoleClusters() {
         return jobAnalyticsService.getJobRoleClusters();
     }
